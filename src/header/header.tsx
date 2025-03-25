@@ -19,7 +19,7 @@ export const Header = () => {
         <button onClick={() => setShowHelp(true)} className={styles.helpButton}>
           ?
         </button>
-        <h1>{gameMode === "6letters" ? "Wordle 6" : "Wordle Clone"}</h1>
+        <h1>class wardle</h1>
         <div className={styles.endButtonsContainer}>
           {gameState !== "inprogress" && (
             <button
