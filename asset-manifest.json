@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/class-wardle/static/css/main.d9cad664.css",
-    "main.js": "/class-wardle/static/js/main.f73c4b68.js",
+    "main.js": "/class-wardle/static/js/main.1c65e43c.js",
     "index.html": "/class-wardle/index.html",
     "main.d9cad664.css.map": "/class-wardle/static/css/main.d9cad664.css.map",
-    "main.f73c4b68.js.map": "/class-wardle/static/js/main.f73c4b68.js.map"
+    "main.1c65e43c.js.map": "/class-wardle/static/js/main.1c65e43c.js.map"
   },
   "entrypoints": [
     "static/css/main.d9cad664.css",
-    "static/js/main.f73c4b68.js"
+    "static/js/main.1c65e43c.js"
   ]
 }
