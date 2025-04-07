@@ -2,6 +2,7 @@ import { ToastOptions } from "../base/toast/toast";
 import { LocalStorage } from "../utils/local_storage";
 import { solutionList5Letters } from "../utils/words_5letters";
 import { solutionList6Letters } from "../utils/words_6letters";
+
 import { getConstraints } from "./get_constraints";
 
 export type LetterStatus = "correct" | "misplaced" | "absent" | "input";
@@ -29,7 +30,7 @@ export type Constraints = {
 
 export type GameState = "inprogress" | "success" | "fail";
 
-export type GameMode = "5letters" | "6letters";
+export type GameMode = "5lettersC" | "5letters" | "6letters";
 
 export type Theme = "light" | "dark" | "adaptive";
 
@@ -83,7 +84,8 @@ const getDailySolution = (mode: GameMode) => {
     Math.abs(today.getTime() - wordleStartDate.getTime()) / (1000 * 3600 * 24)
   );
   return {
-    solution: solutionList[diffDays % solutionList.length],
+    solution: "forty",
+    //solutionList[diffDays % solutionList.length], to custom solution
     day: diffDays,
   };
 };
@@ -98,7 +100,7 @@ export const getWordLength = (gameMode: GameMode) => {
 const createInitWordle = (
   gameMode: GameMode,
   day: number,
-  solution: string
+  solution: string 
 ): Wordle => {
   const wordLen = getWordLength(gameMode);
   return {
@@ -128,7 +130,7 @@ export const createInitialState = (): RootState => {
   const storedGameMode: GameMode | null = LocalStorage.getItem(
     "gameMode"
   ) as GameMode;
-  const gameMode = storedGameMode ?? "6letters";
+  const gameMode = storedGameMode ?? "5letters";
   LocalStorage.setItem("gameMode", gameMode);
 
   // Persisted game state
@@ -143,11 +145,12 @@ export const createInitialState = (): RootState => {
 
   // Persisted game state is from an older day
   if (storedWordle?.day !== day) {
-    storedWordle = undefined;
+    storedWordle = undefined; 
     LocalStorage.removeItem(gameStateKey);
   }
 
   const wordle = storedWordle ?? createInitWordle(gameMode, day, solution);
+  //const wordle = createInitWordle(gameMode, day, solution);
 
   return {
     wordle,

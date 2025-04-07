@@ -47,10 +47,10 @@ const getShareContent = (state: RootState) => {
     shareGrid = shareGrid.concat(shareWord + "\n");
   }
 
-  const title = state.gameMode === "5letters" ? "Wordle(clone)" : "Wordle6";
+  const title = state.gameMode === "5letters" ? "Class Wardle" : "Wordle6";
   const finishLine = wordle.gameState === "success" ? wordle.currentInputLine : "x";
   const attempt = `${finishLine}/${wordle.wordLines.length}`;
-  const url = "https://code.eternalthinker.co/wordle-clone";
+  const url = "https:// link2newsletter ";
   const shareContent = `${title} ${wordle.day} ${attempt}\n\n${shareGrid}\n${url}`;
 
   return shareContent;

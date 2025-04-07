@@ -37,10 +37,10 @@ export const SettingsScreen = ({
           <Toggle onToggle={onToggleDarkMode} toggled={theme === "dark"} />
         </div>
 
-        <div className={styles.setting}>
+        {/* <div className={styles.setting}>
           <h4>6 letter words</h4>
           <Toggle onToggle={onToggleGameMode} toggled={gameMode === "6letters"} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
