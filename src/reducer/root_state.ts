@@ -84,7 +84,7 @@ const getDailySolution = (mode: GameMode) => {
     Math.abs(today.getTime() - wordleStartDate.getTime()) / (1000 * 3600 * 24)
   );
   return {
-    solution: "taxes",
+    solution: "forty",
     //solutionList[diffDays % solutionList.length], to custom solution
     day: diffDays,
   };
